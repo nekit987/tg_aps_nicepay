@@ -1,0 +1,197 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #1a1a1a;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+  </style>
+ </head>
+ <body class="bg-black text-white font-sans">
+  <div class="p-4">
+   <h1 class="text-xl font-bold">
+    Привет, nekit98WYoEN
+   </h1>
+   <p class="text-sm text-gray-400 mt-1">
+    Мы рады приветствовать на NicePay! Перейдите на интересующий раздел, чтобы начать ваше удивительное путешествие с нами
+   </p>
+   <div class="grid grid-cols-2 gap-4 mt-4">
+    <div class="bg-gray-800 p-4 rounded-lg">
+     <p class="text-lg font-bold">
+      $0.00
+     </p>
+     <p class="text-sm text-gray-400">
+      Общий баланс
+     </p>
+    </div>
+    <button class="bg-gray-800 p-4 rounded-lg flex items-center justify-center" onclick="openModal('modal1')">
+     <i class="fas fa-plus text-2xl">
+     </i>
+     <p class="ml-2">
+      Пополнить кошелек
+     </p>
+    </button>
+    <button class="bg-gray-800 p-4 rounded-lg flex items-center justify-center" onclick="openModal('modal2')">
+     <i class="fas fa-exchange-alt text-2xl">
+     </i>
+     <p class="ml-2">
+      Перевести средства
+     </p>
+    </button>
+    <button class="bg-gray-800 p-4 rounded-lg flex items-center justify-center" onclick="openModal('modal3')">
+     <i class="fas fa-list text-2xl">
+     </i>
+     <p class="ml-2">
+      Все транзакции
+     </p>
+    </button>
+   </div>
+   <h2 class="text-lg font-bold mt-6">
+    P2P трейдинг
+   </h2>
+   <div class="bg-gray-800 p-4 rounded-lg mt-2 flex items-center justify-between">
+    <div>
+     <p class="text-xl font-bold">
+      0 USDT
+     </p>
+     <p class="text-sm text-gray-400">
+      $0.00 за сегодня
+     </p>
+    </div>
+    <img alt="P2P trading icon" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/EuTkcc8vbK29Kmdcu8ML9LjwVNEdoKwau3i06qipbVk.jpg" width="50"/>
+   </div>
+   <h2 class="text-lg font-bold mt-6">
+    Моя статистика
+   </h2>
+   <button class="bg-gray-800 p-4 rounded-lg mt-2 flex items-center w-full" onclick="openModal('modal4')">
+    <img alt="Statistics icon" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/Q8oZYdyZK6OytJbghHObiYSJCdVU_FqK8e5PxwcQt-A.jpg" width="50"/>
+    <div class="ml-2">
+     <p class="font-bold">
+      Моя статистика
+     </p>
+     <p class="text-sm text-gray-400">
+      История доходов и трейдов
+     </p>
+    </div>
+   </button>
+   <div class="grid grid-cols-2 gap-4 mt-4">
+    <button class="bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center" onclick="openModal('modal5')">
+     <p class="text-center">
+      Трейдинг USDT to Fiat
+     </p>
+     <p class="text-sm text-gray-400">
+      Отправить деньги трейдеру
+     </p>
+     <button class="bg-green-500 text-black px-2 py-1 rounded mt-2">
+      Продажа USDT
+     </button>
+    </button>
+    <button class="bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center" onclick="openModal('modal6')">
+     <p class="text-center">
+      Трейдинг Fiat to USDT
+     </p>
+     <p class="text-sm text-gray-400">
+      Отправить деньги трейдеру
+     </p>
+     <button class="bg-blue-500 text-black px-2 py-1 rounded mt-2">
+      Покупка USDT
+     </button>
+    </button>
+   </div>
+  </div>
+  <!-- Modals -->
+  <div class="modal" id="modal1">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">
+     ×
+    </span>
+    <p>
+     Пополнить кошелек
+    </p>
+   </div>
+  </div>
+  <div class="modal" id="modal2">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">
+     ×
+    </span>
+    <p>
+     Перевести средства
+    </p>
+   </div>
+  </div>
+  <div class="modal" id="modal3">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">
+     ×
+    </span>
+    <p>
+     Все транзакции
+    </p>
+   </div>
+  </div>
+  <div class="modal" id="modal4">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal('modal4')">
+     ×
+    </span>
+    <p>
+     Моя статистика
+    </p>
+   </div>
+  </div>
+  <div class="modal" id="modal5">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal('modal5')">
+     ×
+    </span>
+    <p>
+     Трейдинг USDT to Fiat
+    </p>
+   </div>
+  </div>
+  <div class="modal" id="modal6">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal('modal6')">
+     ×
+    </span>
+    <p>
+     Трейдинг Fiat to USDT
+    </p>
+   </div>
+  </div>
+  <script>
+   function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+  </script>
+ </body>
+</html>
